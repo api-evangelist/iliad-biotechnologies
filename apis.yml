@@ -1,7 +1,16 @@
 aid: iliad-biotechnologies
 name: ILiAD Biotechnologies
-description: 'ILiAD Biotechnologies is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'ILiAD Biotechnologies, Inc. is a privately held, clinical-stage biotechnology
+  company headquartered in Weston, Florida, developing BPZE1 — a live attenuated intranasal
+  vaccine candidate designed to prevent Bordetella pertussis (whooping cough) colonization
+  and transmission — alongside its B-Tech vector platform, which the company is exploring
+  for infectious, allergic, autoimmune and neurodegenerative disease. The BPZE1 technology
+  originated at Institut Pasteur de Lille and is exclusively licensed to ILiAD, which
+  announced a $115M Series B in February 2026 and received a UK MHRA Innovation Passport
+  designation in December 2024. ILiAD publishes a static corporate and scientific website
+  only: as of 2026-08-22 it operates no public API, developer portal, SDK, machine-readable
+  specification, or any other programmable surface.'
+image: https://iliadbio.com/images/logo1.png
 url: https://raw.githubusercontent.com/api-evangelist/iliad-biotechnologies/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +21,14 @@ created: '2026-08-22'
 modified: '2026-08-22'
 tags:
 - Company
+- Biotechnology
+- Vaccines
+- Life Sciences
+- Pharmaceuticals
+- Health
+- Immunology
+- Infectious Disease
+- Clinical Trials
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +37,55 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://iliadbio.com/
+- type: About
+  url: https://iliadbio.com/company/overview.html
+- type: News
+  url: https://iliadbio.com/company/news.html
+- type: Investors
+  url: https://iliadbio.com/company/for-investors.html
+- type: Careers
+  url: https://iliadbio.com/careers.html
+- type: ContactUs
+  url: https://iliadbio.com/contact-us.html
+- type: PrivacyPolicy
+  url: https://iliadbio.com/privacy-policy.html
+- type: DomainSecurity
+  url: security/iliad-biotechnologies-domain-security.yml
+- type: LLMsTxt
+  url: llms/iliad-biotechnologies-llms.txt
+- type: Team
+  url: https://iliadbio.com/team/executive-board.html
+- type: Product
+  name: BPZE1 intranasal pertussis vaccine
+  url: https://iliadbio.com/our_science/bpze1_vaccine.html
+- type: Pipeline
+  url: https://iliadbio.com/opportunity/pipeline.html
+- type: Publications
+  url: https://iliadbio.com/our_science/publications.html
+x-enrichment:
+  date: '2026-08-22'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    ILiAD Biotechnologies is a clinical-stage vaccine developer whose product is BPZE1, a live
+    attenuated intranasal pertussis vaccine in human trials — not software — and iliadbio.com is
+    an 88-page static HTML site of science, patent PDFs and press releases where /openapi.json,
+    /graphql, /api-docs, /llms.txt and every /.well-known/ path return a real 404, and
+    api./docs./developer.iliadbio.com do not resolve in DNS.
+  evidence:
+  - url: https://iliadbio.com/openapi.json
+    status: 404
+  - url: https://iliadbio.com/graphql
+    status: 404
+  - url: https://iliadbio.com/.well-known/agent-card.json
+    status: 404
+  - url: https://iliadbio.com/llms.txt
+    status: 404
+  - url: https://iliadbiotech.com/.well-known/security.txt
+    status: 404
+  checked: '2026-08-22'

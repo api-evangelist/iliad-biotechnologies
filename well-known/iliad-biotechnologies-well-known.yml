@@ -1,0 +1,54 @@
+generated: '2026-08-22'
+method: probed
+source: live GET of each /.well-known/ path on every host named in apis.yml (2026-08-22)
+note: >-
+  Every probed path returned a real HTTP 404 on both ILiAD hosts — iliadbio.com serves a
+  2,954-byte styled 404 page with a 404 status, iliadbiotech.com returns a 10-byte "Not Found"
+  body with a 404 status. Neither host is a soft-200 catch-all, so these are honest absences
+  rather than false negatives. NO WellKnown or SecurityTxt pointer is emitted in apis.yml,
+  because nothing was served: this file records a measured absence, not a presence.
+hit_count: 0
+hosts:
+- host: https://iliadbio.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://iliadbiotech.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+soft_404_control:
+  iliadbio.com:
+    probe: https://iliadbio.com/.well-known/api-evangelist-control-probe
+    status: 404
+    bytes: 2954
+  iliadbiotech.com:
+    probe: https://iliadbiotech.com/.well-known/api-evangelist-control-probe
+    status: 404
+    bytes: 10
