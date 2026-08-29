@@ -10,6 +10,17 @@ description: 'ILiAD Biotechnologies, Inc. is a privately held, clinical-stage bi
   designation in December 2024. ILiAD publishes a static corporate and scientific website
   only: as of 2026-08-22 it operates no public API, developer portal, SDK, machine-readable
   specification, or any other programmable surface.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://iliadbio.com/images/logo1.png
 url: https://raw.githubusercontent.com/api-evangelist/iliad-biotechnologies/refs/heads/main/apis.yml
 x-type: company
